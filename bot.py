@@ -90,7 +90,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, lookup_number))
 
     logger.info("Bot starting...")
-    app.run_polling()
+    app.run_polling(stop_signals=None)
 
 
 if __name__ == "__main__":
